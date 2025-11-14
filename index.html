@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto de los Reyes Magos</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header class="portada">
+    <div class="portada-texto">
+      <h1>Auto de los Reyes Magos</h1>
+      <p>Temporada 2025/2026</p>
+    </div>
+	<img src="foto1.png"/>
+  </header>
+
+<section class="presentacion">
+  <h2>Presentación</h2>
+  <div class="presentacion-caja">
+    <div class="presentacion-imagen">
+      <img src="foto2.png"/>
+    </div>    
+    <div class="presentacion-texto">
+      <h3>Acerca de la Obra</h3>
+      <p>
+        Este Auto Sacramental cuya representación queremos ofrecer, forma parte de la Trilogía de los <strong>Autos de Navidad de Oberufer</strong>. Tienen origen medieval, sus comienzos datan en el siglo XII en donde era costumbre escenificar teatros religiosos y ritos sagrados en iglesias y monasterios trasladándose más tarde a plazas y espacios exteriores. Así, la representación del Misterio de la Navidad se convirtió en una tradición, tanto en Europa como en España.
+      </p>
+	  <p>
+	  El <strong>Auto de los Tres Reyes Magos</strong> que propone la Compañía está integrado por representación teatral, canto coral y música de piano y relata el <strong>Nacimiento del Niño Dios, la adoración de los Tres Reyes y la matanza de los Santos Inocentes</strong>, tal y como es narrado en el Evangelio de San Mateo.
+	  </p>
+	  <p>
+	  Está integrado por dieciséis actores y una pianista y aparecen figuras como la Sagrada Familia, el Ángel, los Reyes Magos, el Sabio Sacerdote, el Paje, Herodes, los tres Escribas, el Lacayo, el Soldado, el peón Guerrero y el Diablo.
+	  </p>
+    </div>
+  </div>
+</section>
+
+<div class="degradado-presentacion"></div>
+
+
+<section class="quienes-somos">
+  <h2>Quiénes somos</h2>
+
+  <!-- Bloque 1 -->
+  <div class="bloque-texto sombra">
+    <p>
+      El grupo de actores amateurs está formado por padres, madres y amigos de la Escuela Libre Micael de Las Rozas de Madrid, ya que es en esta Escuela donde se encontró, hace más de veinticinco años, la cantera de personas que estaban interesadas en dar vida a estos Autos tan tradicionales en toda Europa. A lo largo de los años la compañía se va renovando.
+    </p>
+  </div>
+</section>
+
+<section class="quienes-somos">
+<!-- Imágenes superpuestas -->
+  <div class="imagenes-superpuestas">
+    <img src="foto3.png" class="imagen1"/>
+    <img src="foto4.png" class="imagen2"/>
+  </div>
+</section>
+
+<section class="quienes-somos">
+<!-- Caja del elenco -->
+  <div class="elenco sombra">
+    <h3>Elenco</h3>
+    <div class="lista-elenco">
+      <div>
+        <h4>Auto del Paraíso</h4>
+        <div>
+          <p>... <em>Cantor del Árbol</em></p>
+          <p>... <em>Ángel Gabriel</em></p>
+          <p>... <em>Dios Padre</em></p>
+          <p>... <em>Adán</em></p>
+          <p>... <em>Eva</em></p>
+          <p>... <em>Diablo</em></p>
+        </div>
+      </div>
+      <div>
+        <div><h4>Auto de los Reyes Magos</h4></div>
+        <div>
+          <p>María Pérez Vázquez <em>María</em></p>
+          <p>J. Javier Peña C. <em>José</em></p>
+          <p>Marina Navarro Martínez <em>Ángel</em></p>
+          <p>Vicente Rodríguez Cubo <em>Rey Gaspar</em></p>
+          <p>Cristian Martínez <em>Rey Melchor</em></p>
+          <p>Astrid Weissenborn-García <em>Rey Baltasar</em></p>
+          <p>Maribel Galán <em>Sabio sacerdote</em></p>
+          <p>Ana Sebastián de Erice <em>Paje</em></p>
+        </div>
+        <div>
+          <p>Javier Gómez Jácome <em>Herodes</em></p>
+          <p>Álvaro García <em>Escriba Caifás</em></p>
+          <p>Rosa-Luisa Muñoz Revilla <em>Escriba Pilato</em></p>
+          <p>Bárbara Soria Bollo <em>Escriba Jonás</em></p>
+          <p>Carolina Recio Ríos <em>Lacayo</em></p>
+          <p>Adelino Jiménez López <em>Capitán</em></p>
+          <p>... <em>Peón guerrero</em></p>
+          <p>David Escribese <em>Diablo</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="degradado-quienes"></div>
+
+
+<section class="imagen-final">
+  <img src="adoracion.png"/>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span class="arrow left">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+  <span class="arrow right">&#10095;</span>
+</div>
+
+<script>
+  const images = Array.from(document.querySelectorAll('img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  document.querySelector('.arrow.left').addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  });
+
+  document.querySelector('.arrow.right').addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  });
+
+  // Seleccionamos el div y la imagen
+  const div = document.querySelector(".imagenes-superpuestas");
+  const img = document.querySelector(".imagen1");
+  div.style.height = img.offsetHeight + "px";
+  
+</script>
+
+</body>
+</html>

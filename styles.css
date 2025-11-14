@@ -1,0 +1,430 @@
+/* Tipografía sugerida */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf3;
+  color: #333;
+  line-height: 1.6;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+img {
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de la portada */
+header.portada {
+  position: relative;          /* Necesario para posicionar el texto encima */
+  width: 100%;
+  overflow: visible;           /* Permitimos que la página haga scroll si la imagen es alta */
+  color: #fff;                 /* Color del texto por defecto */
+}
+
+/* La imagen: ocupa el 100% de ancho y mantiene proporción */
+header.portada > img {
+  display: block;              /* Quita el espacio en línea bajo la imagen */
+  width: 100%;                 /* 100% del ancho de la pantalla */
+  height: auto;                /* Mantiene el aspect ratio */
+  max-width: 100%;             /* Previene desbordes en algunos navegadores */
+}
+
+/* El bloque de texto superpuesto */
+.portada-texto {
+  position: absolute;          /* Se coloca encima de la imagen */
+  left: 1rem;                  /* Alineado a la izquierda con margen cómodo */
+  top: 8%;                     /* Ligeramente arriba (ajusta a gusto: 6–12%) */
+  max-width: min(90%, 40rem);  /* Evita líneas demasiado largas */
+  text-align: left;            /* Alineación a la izquierda */
+  line-height: 1.2;
+  /* Mejorar legibilidad sobre cualquier foto */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Tipografías fluidas y responsive */
+.portada-texto h1 {
+  margin: 0 0 .25em 0;
+  font-weight: 700;
+  /* Tamaño fluido con límites: se adapta a móviles y pantallas grandes */
+  font-size: clamp(1.6rem, 4vw + .2rem, 3rem);
+}
+
+.portada-texto p {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.2vw + .1rem, 1.5rem);
+}
+
+/* Opcional: si la foto tiene zonas claras, añade un fondo sutil al texto */
+@media (prefers-color-scheme: light) {
+  .portada-texto {
+    background: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0));
+    padding: .5rem .75rem .5rem .75rem;
+    border-radius: .25rem;
+  }
+}
+
+/* Pequeño ajuste en móviles muy estrechos */
+/* Acerca un poco el bloque a la parte superior y margen lateral menor */
+@media (max-width: 420px) {
+  .portada-texto {
+    left: .75rem;
+    top: 6%;
+  }
+}
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+  .portada h1 {
+    font-size: 1.8rem;
+  }
+
+  .portada p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+}
+
+.presentacion {
+  padding: 2rem 5%;
+  background-color: #fef6f0; /* tono cálido suave */
+}
+
+.presentacion h2 {
+  color: #a86c4c;
+}
+
+/* Contenedor principal */
+.presentacion-caja {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Imagen a la izquierda con sombra y bordes cuadrados */
+.presentacion-imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto a la derecha dentro de caja con sombra */
+.presentacion-texto {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0; /* bordes cuadrados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e6dccc;
+}
+
+.presentacion-texto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #a86c4c;
+}
+
+.presentacion-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .presentacion-caja {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentacion-imagen img,
+  .presentacion-texto {
+    width: 100%;
+  }
+}
+
+.degradado-presentacion {
+  height: 80px;
+  background: linear-gradient(to bottom, #fef6f0, #f3f7f1);
+}
+
+.quienes-somos {
+  padding: 2rem 5%;
+  margin-top:0;
+  margin-bottom:0;
+  background-color: #f3f7f1;
+}
+
+.quienes-somos h2 {
+  color: #5a7c4c;
+}
+
+/* Cajas de texto */
+.bloque-texto {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  border: 1px solid #dce3d1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bloque-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Imágenes superpuestas, más anchas */
+.imagenes-superpuestas {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+}
+
+.imagenes-superpuestas img {
+  position: absolute;
+  width: 48%;
+  height: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.imagenes-superpuestas .imagen1 {
+  transform: rotate(-2deg);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.imagenes-superpuestas .imagen2 {
+  transform: rotate(2deg);
+  top: 20px;
+  right: 0;
+  z-index: 2;
+}
+
+.elenco {
+  background-color: #eef3ea;
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: 12px;
+  width: 70%;
+  border: 1px solid #dce3d1;
+}
+
+.elenco h3 {
+  color: #5a7c4c;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.lista-elenco {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.lista-elenco div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.lista-elenco p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.lista-elenco em {
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .imagenes-superpuestas {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagenes-superpuestas img {
+    position: static;
+    transform: none;
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+.degradado-quienes {
+  height: 80px;
+  /*background: linear-gradient(to bottom, #f3f7f1, #fdfaf5);*/
+  background: linear-gradient(to bottom, #f3f7f1, #ffffff);
+}
+
+.condiciones-tecnicas {
+  padding: 2rem 5%;
+  background-color: #fdfaf5;
+}
+
+.condiciones-tecnicas h2 {
+  color: #a86c4c;
+}
+
+/* Caja con sombreado */
+.condiciones-caja {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e6dccc;
+}
+
+.condiciones-caja p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.degradado-condiciones {
+  height: 80px;
+  background: linear-gradient(to bottom, #fdfaf5, #f0f4e3);
+}
+
+.presupuesto {
+  padding: 2rem 5%;
+  background-color: #f0f4e3; /* fondo diferente, verde pastel suave */
+}
+
+.presupuesto h2 {
+  color: #5a7c4c; /* tono verde más oscuro */
+}
+
+/* Caja centrada y estrecha */
+.presupuesto-caja {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dce3d1;
+}
+
+.presupuesto-caja p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.degradado-presupuesto {
+  height: 80px;
+  background: linear-gradient(to bottom, #f0f4e3, #e3f0f9);
+}
+
+.contactos {
+  padding: 2rem 5%;
+  background-color: #e3f0f9; /* azul pastel suave */
+}
+
+.contactos h2 {
+  color: #3a6c8b;
+}
+
+/* Caja de contactos */
+.contactos-caja {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactos-caja p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.degradado-contactos {
+  height: 80px;
+  background: linear-gradient(to bottom, #e3f0f9, #ffffff);
+}
+
+.imagen-final {
+  background-color: #ffffff; /* fondo blanco */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.imagen-final img {
+  max-width: 20%;
+  width: 100%;
+  height: auto;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+  z-index: 10000;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
