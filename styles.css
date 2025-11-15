@@ -114,7 +114,6 @@ header.portada > img {
 .presentacion-caja {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
 }
 
@@ -237,7 +236,7 @@ header.portada > img {
   padding: 1.5rem;
   margin: 0 auto;
   border-radius: 12px;
-  width: 70%;
+  width: 80%;
   border: 1px solid #dce3d1;
 }
 
