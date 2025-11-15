@@ -165,6 +165,15 @@ header.portada > img {
   background: linear-gradient(to bottom, #fef6f0, #f3f7f1);
 }
 
+.representaciones {
+  padding: 3rem 10%;
+  margin-top:0;
+  margin-bottom:0;
+  background-color: #f3f7f1;
+  text-align: center;
+}
+
+
 .quienes-somos {
   padding: 2rem 5%;
   margin-top:0;
