@@ -173,6 +173,31 @@ header.portada > img {
   text-align: center;
 }
 
+.dibujos  {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente si hay altura */
+  gap: 20px;               /* Espacio entre imágenes */
+  background-color: #f3f7f1;
+}
+
+.dibujos img {
+  height: 200px; /* Ajusta según tu diseño */
+  width: auto;
+}
+
+/* ✅ Responsive para móvil */
+@media (max-width: 768px) {
+
+  .dibujos {
+    flex-direction: column; /* Apila las imágenes verticalmente */
+    align-items: center;
+  }
+  .dibujos img {
+    height: auto;
+    max-width: 200px; /* Ajuste opcional */
+  }
+}
 
 .quienes-somos {
   padding: 2rem 5%;

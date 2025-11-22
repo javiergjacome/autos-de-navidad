@@ -11,9 +11,11 @@
   <header class="portada">
     <div class="portada-texto">
       <h1>Autos de Oberufer</h1>
-      <p>Temporada 2025/2026</p>
+      <p>Escuela Libre Micael</p>
+      <p>Curso 2025/2026</p>
     </div>
-	<img src="YDRAY-R0000931.jpg"/>
+    <img src="pastores-belen.png"/>
+    <!--<img src="YDRAY-R0000931.jpg"/>-->
   </header>
 
 <section class="presentacion">
@@ -36,6 +38,12 @@
     <p><strong>Miércoles 17 de diciembre, 19h:</strong> Auto de los Pastores</p>
     <p><strong>Viernes 19 de diciembre, 19h:</strong> Auto de los Reyes Magos</p>
   </div>
+</section>
+
+<section class="dibujos">
+  <img src="ex-del-paraiso.png" class="dibujo1"/>
+  <img src="pastores-belen.png"/>
+  <img src="reyes-belen.png"/>
 </section>
 
 <div class="degradado-representaciones"></div>
@@ -115,7 +123,8 @@
 
 
 <section class="imagen-final">
-  <img src="adoracion.png"/>
+  <!--<img src="adoracion.png"/>-->
+  <img src="IMG-20251027.jpg"/>
 </section>
 
 <div id="lightbox" class="lightbox">
@@ -156,11 +165,39 @@
     lightboxImg.src = images[currentIndex].src;
   });
 
-  // Seleccionamos el div y la imagen
+  // Crear el objeto media query
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+  // Función para manejar el cambio
+  function handleMediaChange(e) {
+    const contenedor = document.querySelector('.dibujos'); // Cambia por tu clase
+    const imagenes = contenedor.querySelectorAll('img');
+    if (e.matches) {
+      // Aquí puedes ejecutar código específico para móvil
+      let alturaTotal = 0;
+      imagenes.forEach(img => {
+        alturaTotal += img.offsetHeight; // Suma la altura real de cada imagen
+      });
+      contenedor.style.height = alturaTotal + 'px';
+    } else {
+      // Aquí puedes ejecutar código específico para escritorio
+      contenedor.style.height = imagenes[0].offsetHeight + "px";
+    }
+  }
+
+  // Escuchar cambios en la media query
+  mediaQuery.addEventListener("change", handleMediaChange);
+
+  // Comprobar el estado inicial
+  handleMediaChange(mediaQuery);
   const div = document.querySelector(".imagenes-superpuestas");
   const img = document.querySelector(".imagen1");
   div.style.height = img.offsetHeight + "px";
-  
+
+  const div2 = document.querySelector(".dibujos");
+  const dib1 = document.querySelector(".dibujo1");
+  div2.style.height = (dib1.offsetHeight) + "px";
+
 </script>
 
 </body>
