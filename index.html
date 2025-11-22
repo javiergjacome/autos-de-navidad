@@ -62,7 +62,8 @@
 <section class="quienes-somos">
 <!-- Imágenes superpuestas -->
   <div class="imagenes-superpuestas">
-    <img src="foto3.png" class="imagen1"/>
+    <img src="IMG-20251122.jpg" class="imagen1"/>
+    <img src="foto3.png"/>
     <img src="foto4.png" class="imagen2"/>
   </div>
 </section>
@@ -75,12 +76,13 @@
       <div>
         <h4>Auto del Paraíso</h4>
         <div>
-          <p>... <em>Cantor del Árbol</em></p>
+          <p>Amós González Tejero <em>Cantor del Árbol</em></p>
           <p>Ana Sebastián de Erice <em>Ángel Gabriel</em></p>
-          <p>Manuel Toro <em>Dios Padre</em></p>
+          <p>Eduardo Daswani <em>Dios Padre</em></p>
           <p>David Escribese <em>Adán</em></p>
           <p>Carolina Recio Ríos <em>Eva</em></p>
           <p>Rosa-Luisa Muñoz Revilla <em>Diablo</em></p>
+          <p>Diego Madrid <em>Pianista</em></p>
           <p>J. Javier Peña C. <em>Iluminador</em></p>
           <p>Severino Airoldi <em>Director</em></p>
         </div>
@@ -171,19 +173,23 @@
 
   // Función para manejar el cambio
   function handleMediaChange(e) {
-    const contenedor = document.querySelector('.dibujos'); // Cambia por tu clase
-    const imagenes = contenedor.querySelectorAll('img');
-    if (e.matches) {
-      // Aquí puedes ejecutar código específico para móvil
-      let alturaTotal = 0;
-      imagenes.forEach(img => {
-        alturaTotal += img.offsetHeight; // Suma la altura real de cada imagen
-      });
-      contenedor.style.height = alturaTotal + 'px';
-    } else {
-      // Aquí puedes ejecutar código específico para escritorio
-      contenedor.style.height = imagenes[0].offsetHeight + "px";
+    function setHeight(c) {
+      const contenedor = document.querySelector(c); // Cambia por tu clase
+      const imagenes = contenedor.querySelectorAll('img');
+      if (e.matches) {
+        // Aquí puedes ejecutar código específico para móvil
+        let alturaTotal = 0;
+        imagenes.forEach(img => {
+          alturaTotal += img.offsetHeight; // Suma la altura real de cada imagen
+        });
+        contenedor.style.height = alturaTotal + 'px';
+      } else {
+        // Aquí puedes ejecutar código específico para escritorio
+        contenedor.style.height = imagenes[0].offsetHeight + "px";
+      }
     }
+    setHeight('.imagenes-superpuestas');
+    setHeight('.dibujos');
   }
 
   // Escuchar cambios en la media query
