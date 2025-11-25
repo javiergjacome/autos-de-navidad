@@ -223,7 +223,7 @@ header.portada > img {
 }
 
 .fotos-elencos img {
-  max-width: 30%; /* lado a lado en pantallas grandes */
+  max-width: 45%; /* lado a lado en pantallas grandes */
   height: auto;
   display: block;
   transition: transform 0.3s ease;
