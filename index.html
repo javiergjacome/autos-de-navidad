@@ -61,7 +61,7 @@
 
 <section class="quienes-somos">
 <!-- Imágenes superpuestas -->
-  <div class="imagenes-superpuestas">
+  <div class="fotos-elencos">
     <img src="IMG-20251122.jpg" class="imagen1"/>
     <img src="foto3.png"/>
     <img src="foto4.png" class="imagen2"/>
@@ -188,7 +188,7 @@
         contenedor.style.height = imagenes[0].offsetHeight + "px";
       }
     }
-    setHeight('.imagenes-superpuestas');
+    setHeight('.dibujos');
     setHeight('.dibujos');
   }
 
@@ -197,13 +197,6 @@
 
   // Comprobar el estado inicial
   handleMediaChange(mediaQuery);
-  const div = document.querySelector(".imagenes-superpuestas");
-  const img = document.querySelector(".imagen1");
-  div.style.height = img.offsetHeight + "px";
-
-  const div2 = document.querySelector(".dibujos");
-  const dib1 = document.querySelector(".dibujo1");
-  div2.style.height = (dib1.offsetHeight) + "px";
 
 </script>
 
