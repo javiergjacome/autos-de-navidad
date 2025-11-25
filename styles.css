@@ -72,35 +72,6 @@ header.portada > img {
   }
 }
 
-/* Pequeño ajuste en móviles muy estrechos */
-/* Acerca un poco el bloque a la parte superior y margen lateral menor */
-@media (max-width: 420px) {
-  .portada-texto {
-    left: .75rem;
-    top: 6%;
-  }
-}
-
-/* Responsive ajustes */
-@media (max-width: 600px) {
-  .portada h1 {
-    font-size: 1.8rem;
-  }
-
-  .portada p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Responsive */
-@media (min-width: 600px) {
-
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-}
-
 .presentacion {
   padding: 2rem 5%;
   background-color: #fef6f0; /* tono cálido suave */
@@ -145,19 +116,6 @@ header.portada > img {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .presentacion-caja {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .presentacion-imagen img,
-  .presentacion-texto {
-    width: 100%;
-  }
 }
 
 .degradado-presentacion {
@@ -237,30 +195,6 @@ header.portada > img {
   transform: rotate(4deg);
 }
 
-/* En pantallas estrechas */
-@media (max-width: 768px) {
-  .dibujos, .fotos-elencos {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .fotos-elencos img, .dibujos img {
-    height: auto;
-    max-width: 80%;
-    width: 80%;
-    position: static;
-    margin-bottom: 1rem;
-  }
-
-  .fotos-elencos .imagen1, .fotos-elencos .imagen2 {
-    transform: none;
-  }
-
-}
-
-
 .elenco {
   background-color: #eef3ea;
   padding: 1.5rem;
@@ -305,39 +239,6 @@ header.portada > img {
   background: linear-gradient(to bottom, #f3f7f1, #ffffff);
 }
 
-.condiciones-tecnicas {
-  padding: 2rem 5%;
-  background-color: #fdfaf5;
-}
-
-.condiciones-tecnicas h2 {
-  color: #a86c4c;
-}
-
-/* Caja con sombreado */
-.condiciones-caja {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e6dccc;
-}
-
-.condiciones-caja p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.degradado-condiciones {
-  height: 80px;
-  background: linear-gradient(to bottom, #fdfaf5, #f0f4e3);
-}
-.degradado-contactos {
-  height: 80px;
-  background: linear-gradient(to bottom, #e3f0f9, #ffffff);
-}
-
 .imagen-final {
   background-color: #ffffff; /* fondo blanco */
   padding: 2rem 0;
@@ -345,8 +246,8 @@ header.portada > img {
 }
 
 .imagen-final img {
-  max-width: 20%;
-  width: 100%;
+  max-width: 40%;
+  width: 40%;
   height: auto;
 }
 
@@ -389,3 +290,74 @@ header.portada > img {
 .arrow.right {
   right: 10px;
 }
+
+/* Pequeño ajuste en móviles muy estrechos */
+/* Acerca un poco el bloque a la parte superior y margen lateral menor */
+@media (max-width: 420px) {
+  .portada-texto {
+    left: .75rem;
+    top: 6%;
+  }
+}
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+  .portada h1 {
+    font-size: 1.8rem;
+  }
+
+  .portada p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+}
+
+
+/* En pantallas estrechas */
+@media (max-width: 768px) {
+
+  .presentacion-caja {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentacion-imagen img,
+  .presentacion-texto {
+    width: 100%;
+  }
+
+  .dibujos, .fotos-elencos {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fotos-elencos img, .dibujos img {
+    height: auto;
+    max-width: 80%;
+    width: 80%;
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .fotos-elencos .imagen1, .fotos-elencos .imagen2 {
+    transform: none;
+  }
+
+  .imagen-final img {
+    max-width: 80%;
+    width: 80%;
+    height: auto;
+    }
+
+}
+
